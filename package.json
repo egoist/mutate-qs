@@ -1,0 +1,41 @@
+{
+  "name": "mutate-qs",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "mutate queryString in browser location",
+  "license": "MIT",
+  "repository": "egoist/mutate-qs",
+  "author": {
+    "name": "egoist",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "npm run build && xo && ava",
+    "build": "rollup -c",
+    "dev": "ntr karma --watch"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "queryString"
+  ],
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "rollup": "^0.22.0",
+    "rollup-plugin-babel": "^2.2.0",
+    "xo": "^0.12.1"
+  },
+  "xo": {
+    "esnext": true,
+    "semicolon": false,
+    "ignores": [
+      "index.js"
+    ]
+  }
+}
