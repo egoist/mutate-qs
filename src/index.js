@@ -1,11 +1,11 @@
 /* global location */
 function queryToString(query) {
 	const queryString = []
+	/* eslint-disable guard-for-in */
 	for (const i in query) {
-		if (query[i]) {
-			queryString.push(`${i}=${query[i]}`)
-		}
+		queryString.push(`${i}=${query[i]}`)
 	}
+	/* eslint-enable */
 	return `?${queryString.join('&')}`
 }
 
@@ -23,11 +23,11 @@ export default function (obj, query = location.search) {
 		const [key, value] = queryBody.split('=')
 		queryObj[key] = value
 	}
+	/* eslint-disable guard-for-in */
 	// override query with obj's key/value
 	for (const key in obj) {
-		if (obj[key]) {
-			queryObj[key] = obj[key]
-		}
+		queryObj[key] = obj[key] === null ? '' : obj[key]
 	}
+	/* eslint-enable */
 	return queryToString(queryObj)
 }

@@ -18,6 +18,10 @@ const mutateQs = require('mutate-qs');
 // assuming location.search is `?bar=haha`
 mutateQs({foo: 'lily'})
 //=> '?bar=haha&foo=lily'
+
+// to remove a param
+mutateQs({bar: null})
+//=> '?bar='
 ```
 
 
