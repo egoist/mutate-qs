@@ -30,10 +30,11 @@
   "devDependencies": {
     "ava": "^0.8.0",
     "babel-preset-es2015-rollup": "^1.0.0",
+    "cz-conventional-changelog": "^1.1.5",
     "rollup": "^0.22.0",
     "rollup-plugin-babel": "^2.2.0",
-    "xo": "^0.12.1",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^4.3.5",
+    "xo": "^0.12.1"
   },
   "xo": {
     "esnext": true,
@@ -41,5 +42,10 @@
     "ignores": [
       "index.js"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
