@@ -29,5 +29,6 @@ export default function (obj, query = location.search) {
 		queryObj[key] = obj[key] === null ? '' : obj[key]
 	}
 	/* eslint-enable */
+	console.log('this is not for real')
 	return queryToString(queryObj)
 }
